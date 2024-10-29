@@ -1,0 +1,654 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #f0f4ff;
+  color: #000000;
+  line-height: 1.8;
+}
+
+#main-header,
+#about,
+#skills,
+#projects,
+#contact {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* Navigation Bar */
+nav#navbar {
+  background-color: #c9d7e9;
+  color: #3f3997;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+nav .logo {
+  padding-left: 20px;
+}
+
+nav .logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: gold;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+nav .nav-links li {
+  margin-right: 40px;
+}
+
+nav .nav-links li a {
+  color: #3f1ec3;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+nav .nav-links li a:hover {
+  color: #000000;
+}
+
+.nav-links {
+  display: flex; /* or display: block if you want vertical stacking */
+  position: relative;
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ffffff;
+  right: 1rem;
+}
+
+.nav-links .close-icon {
+  display: none;
+}
+
+/* Header Section */
+#main-header {
+  background-color: #f0f4ff; /* Light background color for header */
+  color: #1e3a8a; /* Dark blue color */
+  padding: 150px 20px; /* Top and bottom padding */
+}
+
+#main-header .main-container {
+  max-width: 800px; /* Set max width for the content */
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center; /* Center text within the container */
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+
+#main-header h1 {
+  font-family: "Yeseva One", serif;
+  font-size: 4rem; /* Heading size */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 10px; /* Space below */
+}
+
+#main-header p {
+  font-size: 1.2rem; /* Adjust paragraph font size */
+  margin-bottom: 30px; /* Space below */
+  color: #5e6d82; /* Dark gray color */
+  width: 500px;
+  display: flex; /* Use Flexbox to center the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.resume-btn {
+  padding: 12px 30px; /* Button padding */
+  background-color: #1a73e8; /* Button color */
+  font-size: 1.2rem;
+  color: #ffffff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove any border */
+  border-radius: 50px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  cursor: pointer;
+  margin-top: 20px; /* Add margin to separate from paragraph */
+}
+
+/* Hover effect */
+.resume-btn:hover {
+  background-color: #0d47a1; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* About Section */
+#about {
+  text-align: left;
+  color: #000000;
+}
+
+.about-container {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  position: relative;
+}
+
+.about-content {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+}
+
+.about-content img {
+  width: 200px;
+  margin-left: 20px; /* Space between text and image */
+  border-radius: 20px;
+}
+
+/* Wrapper for paragraphs */
+.about-text {
+  display: flex;
+  flex-direction: column; /* Stack paragraphs vertically */
+}
+
+.extra-content {
+  display: none;
+}
+
+.see-more-btn {
+  background-color: transparent;
+  border: none;
+  color: #1a73e8;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Titles */
+h2 {
+  font-family: "Yeseva One", serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1a73e8;
+  margin-left: 30px; /* Set left margin */
+  text-align: center;
+}
+
+/* Paragraphs */
+#about .about-text p {
+  font-size: 1.2rem;
+  margin-left: 0; /* No extra left margin for paragraphs */
+  margin: 0; /* Remove default margin for paragraphs */
+  margin-bottom: 1rem; /* Add spacing between paragraphs */
+  color: #5e6d82;
+}
+
+/* Skills Section */
+#skills {
+  padding: 60px 0;
+  text-align: center;
+  width: 100%;
+  margin-left: 0;
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap */
+  margin-top: 40px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.skill-item {
+  background-color: #dfe0ed;
+  color: #1a73e8;
+  padding: 20px 30px;
+  border-radius: 10px;
+  flex: 1 1 100%; /* Grow and shrink, starting at 100% */
+  max-width: 300px; /* Set a max width */
+  margin: 10px; /* Optional spacing */
+  transition: transform 0.3s ease;
+  margin-right: 20px;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+#skills h2 {
+  margin-left: -5px;
+}
+
+/* Projects Section */
+#projects {
+  scroll-margin-top: -30px;
+  padding: 60px 0;
+  text-align: center;
+  margin-left: 30px;
+}
+
+#projects h2 {
+  font-size: 2rem; /* Adjust the size as needed */
+  color: #1a73e8;
+  width: 100%; /* Take the full width of the container */
+  text-align: center; /* Center the text horizontally */
+  padding: 0 20px; /* Optional: Add padding for spacing */
+  margin-left: -8px;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap */
+  margin-top: 40px;
+}
+
+.project-item {
+  background-color: #dfe0ed;
+  padding: 30px;
+  border-radius: 10px;
+  row-gap: 15px;
+  width: 300px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  margin: 10px;
+  overflow: hidden; /* Ensure content doesn't overflow the box */
+  transition: transform 0.3s ease;
+  display: flex; /* Enable flexbox for vertical alignment */
+  flex-direction: column; /* Arrange content in a column */
+  justify-content: center; /* Center items vertically within the project item */
+  text-align: center; /* Center text within project item */
+}
+
+.project-item img {
+  width: 100%; /* Make the image fill the width of the container */
+  height: 50px; /* Set a fixed height for the image */
+  object-fit: contain; /* Ensure the entire image is visible */
+  border-radius: 10px; /* Match the border radius of the project item */
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.contact-container p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px; /* Set a max-width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input,
+textarea,
+.btn {
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #555;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center icons horizontally */
+  gap: 15px; /* Space between icons */
+  margin-top: 20px; /* Space above the icons */
+}
+
+.social-icons i {
+  font-size: 2rem;
+  color: #1a73e8;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #0d47a1;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #000000;
+  font-size: 1rem;
+}
+
+/* Media Queries for Mobile Devices (max-width: 600px) */
+@media (max-width: 600px) {
+  /* Display only the menu icon on mobile */
+
+  #main-header .main-container {
+    margin-top: 25px;
+    max-width: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements horizontally */
+    text-align: center; /* Center text inside the elements */
+  }
+
+  .menu-icon {
+    display: flex;
+    justify-content: center; /* Center the icon */
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  #main-header h1 {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+    text-align: center;
+    width: 100%; /* Ensure full width for alignment */
+    margin-left: 0%;
+  }
+
+  #main-header p {
+    font-size: 1rem; /* Smaller font size for mobile */
+    padding: 0px 5px;
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Adjust Resume Button */
+  .resume-btn {
+    margin: 20px auto; /* Center horizontally */
+    display: block;
+    text-align: center; /* Center the text inside the button */
+    font-size: 1rem;
+  }
+
+  /* Initially hide the menu */
+  /* Default state for nav-links (hidden) */
+  .nav-links {
+    position: fixed; /* Change to fixed to make it cover the entire viewport */
+    top: 0; /* Align the top of the nav to the top of the viewport */
+    right: -300px; /* Keep the initial position off-screen */
+    background-color: #a2bad9;
+    width: 50%;
+    height: 100vh; /* Set height to 100vh to cover the full viewport */
+    transition: right 0.3s;
+    display: flex; /* Flex for column layout */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+
+  /* When active, show the menu */
+  .nav-links.active {
+    right: 0; /* Bring the nav back into view */
+  }
+
+  body {
+    position: relative; /* Ensure positioning is relative for the pseudo-element */
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(
+      213,
+      209,
+      218,
+      0.5
+    ); /* Optional background color with transparency */
+    z-index: 999; /* Set z-index to be behind the nav */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Transition for smooth effect */
+    filter: blur(40px); /* Blur effect */
+  }
+
+  /* When nav is active, show the blur */
+  body.nav-active::before {
+    opacity: 1; /* Show the blur when nav is active */
+  }
+
+  /* Style the close icon */
+  .nav-links .close-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  /* Add some padding so the close icon is not too close to the edge */
+  .nav-links .close-icon img {
+    cursor: pointer;
+  }
+
+  /* Adjust the main header */
+  #main-header {
+    padding: 100px 0; /* Reduce padding for smaller screens */
+  }
+
+  #main-header h1 {
+    font-family: "Yeseva One", serif;
+    font-size: 2rem; /* Adjust font size */
+  }
+
+  /* About Section */
+  .about-container {
+    max-width: 100%; /* Full width for mobile */
+    padding: 0; /* Align with main header */
+    margin: 0; /* Remove margins for full width */
+  }
+
+  #about .about-container h2 {
+    font-size: 1.5rem; /* Adjust the font size if needed */
+    margin: 10px 0; /* Optional: spacing around the title */
+  }
+
+  .about-content {
+    display: flex; /* Enable flexbox */
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 0px;
+    margin: 0;
+    text-align: left;
+  }
+
+  .about-content img {
+    width: 150px; /* Resize image */
+    margin-bottom: 10px; /* Space between image and text */
+    margin: 10px 0; /* Optional: spacing around the title */
+  }
+
+  #about .about-text p {
+    font-size: 1rem; /* Smaller font size for mobile */
+    margin: 0; /* Remove margin for consistency */
+    text-align: left;
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    flex-direction: column; /* Stack skills vertically */
+    align-items: center;
+  }
+
+  .skill-item {
+    width: 80%; /* Make skill items wider */
+    margin-bottom: 20px;
+  }
+
+  /* Projects Section */
+  .project-item {
+    padding: 15px; /* Less padding on smaller screens */
+  }
+
+  .project-item h3 {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .project-item p {
+    font-size: 0.9rem; /* Adjust font size for readability */
+  }
+
+  .project-item a {
+    padding: 8px 12px; /* Adjust button padding */
+    font-size: 0.8rem; /* Adjust font size */
+  }
+
+  /* Contact Section */
+  #contact p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 10px; /* Reduce padding */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}
+
+/* Media Queries for Tablets and Above (min-width: 601px) */
+@media (min-width: 601px) {
+  #main-header .main-container {
+    max-width: 90%; /* Adjust width for tablet */
+    padding: 0 20px;
+  }
+
+  .menu-icon {
+    display: none; /* Hide the menu icon on tablet and larger screens */
+  }
+
+  .nav-links {
+    position: static; /* Restore default position for nav */
+    display: flex; /* Display navigation links in a row */
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+  }
+
+  .nav-links.active {
+    right: 0; /* Reset right positioning */
+  }
+
+  body.nav-active::before {
+    opacity: 0; /* Disable blur effect for larger screens */
+  }
+
+  #main-header h1 {
+    font-size: 3rem; /* Slightly smaller font size for better fit */
+  }
+
+  #main-header p {
+    padding: 0px 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* About Section */
+  .about-container {
+    max-width: 90%; /* Adjust width */
+    margin: 0 auto;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column; /* Stack image above text */
+    align-items: center; /* Center items */
+    margin: 0 auto; /* Center the content */
+  }
+
+  .about-content img {
+    max-width: 600px; /* Restrict max width */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  #about .about-text {
+    width: 100%; /* Ensure the text takes the full width */
+    max-width: 600px; /* Restrict max width */
+    margin: 0 auto; /* Center text */
+  }
+}
+
+/* Media Queries for Desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  #main-header .main-container {
+    max-width: 1200px; /* Wider for desktop view */
+    margin: 0 auto;
+  }
+
+  #main-header h1 {
+    font-size: 4rem; /* Increase font size for desktop */
+  }
+
+  .nav-links {
+    gap: 30px; /* Add more space between links */
+  }
+}
