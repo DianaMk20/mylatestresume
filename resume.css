@@ -90,10 +90,10 @@ nav .nav-links li a:hover {
 
 /* Menu Icon */
 .menu-icon {
-  display: none;
+  display: none; /* Default to hidden on desktop */
   font-size: 2rem;
   cursor: pointer;
-  color: #ffffff;
+  color: #3f1ec3;
   right: 1rem;
 }
 
