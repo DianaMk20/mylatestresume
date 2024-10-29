@@ -437,7 +437,6 @@ footer {
     align-items: center;
     gap: 10px;
     justify-content: center;
-    z-index: 1000; /* Ensure it appears above other elements */
   }
 
   /* When active, show the menu */
@@ -462,7 +461,6 @@ footer {
       218,
       0.5
     ); /* Optional background color with transparency */
-    z-index: 999; /* Set z-index to be behind the nav */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease; /* Transition for smooth effect */
     filter: blur(40px); /* Blur effect */
@@ -587,7 +585,7 @@ footer {
 
   .nav-links {
     position: static; /* Restore default position for nav */
-    display: flex; /* Display navigation links in a row */
+    display: none;
     background-color: transparent;
     width: auto;
     height: auto;
