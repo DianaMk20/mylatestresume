@@ -39,21 +39,25 @@ closeIcon.onclick = () => {
   menuIcon.setAttribute("aria-expanded", "false"); // Update aria-expanded
 };
 
-// Alert when clicking outside of the navigation links
+// Close the menu when clicking outside of the navigation links
 document.addEventListener("click", function (e) {
   if (
     !menuIcon.contains(e.target) &&
     !navLinks.contains(e.target) &&
     navLinks.classList.contains("active")
   ) {
-    alert("Please click the close button to close the menu.");
+    navLinks.classList.remove("active");
+    menuIcon.classList.remove("active");
+    body.classList.remove("nav-active");
   }
 });
 
 // Close the menu on Escape key press
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && navLinks.classList.contains("active")) {
-    alert("Please click the close button to close the menu.");
+    navLinks.classList.remove("active");
+    menuIcon.classList.remove("active");
+    body.classList.remove("nav-active");
   }
 });
 
