@@ -2,7 +2,6 @@
 const navLinks = document.querySelector(".nav-links");
 const menuIcon = document.querySelector(".menu-icon");
 const closeIcon = document.querySelector(".close-icon");
-const body = document.body; // Select the body element
 
 // Select the "See more" button and the extra content
 const seeMoreBtn = document.querySelector(".see-more-btn");
@@ -19,7 +18,6 @@ seeMoreBtn.addEventListener("click", () => {
 const toggleMenu = () => {
   const isActive = navLinks.classList.toggle("active");
   menuIcon.classList.toggle("active");
-  body.classList.toggle("nav-active"); // Add or remove blur class
   menuIcon.setAttribute("aria-expanded", isActive); // Update aria-expanded
 };
 
@@ -35,7 +33,6 @@ menuIcon.onclick = toggleMenu;
 closeIcon.onclick = () => {
   navLinks.classList.remove("active");
   menuIcon.classList.remove("active");
-  body.classList.remove("nav-active"); // Remove blur class
   menuIcon.setAttribute("aria-expanded", "false"); // Update aria-expanded
 };
 
@@ -48,7 +45,6 @@ document.addEventListener("click", function (e) {
   ) {
     navLinks.classList.remove("active");
     menuIcon.classList.remove("active");
-    body.classList.remove("nav-active");
   }
 });
 
@@ -57,7 +53,6 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && navLinks.classList.contains("active")) {
     navLinks.classList.remove("active");
     menuIcon.classList.remove("active");
-    body.classList.remove("nav-active");
   }
 });
 
