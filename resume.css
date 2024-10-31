@@ -425,36 +425,32 @@ footer {
   /* Initially hide the menu */
   /* Default state for nav-links (hidden) */
   .nav-links {
-    position: fixed; /* Change to fixed to make it cover the entire viewport */
-    top: 0; /* Align the top of the nav to the top of the viewport */
-    right: -300px; /* Keep the initial position off-screen */
+    position: fixed;
+    top: 0;
+    right: -300px;
     background-color: #a2bad9;
     width: 50%;
-    height: 100vh; /* Set height to 100vh to cover the full viewport */
+    height: 100vh;
     transition: right 0.3s;
-    display: flex; /* Flex for column layout */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
-    justify-content: center;
+    justify-content: space-evenly; /* Equal spacing between items */
   }
 
-  /* When active, show the menu */
   .nav-links.active {
-    right: 0; /* Bring the nav back into view */
+    right: 0;
   }
 
-  /* Style the close icon */
   .nav-links .close-icon {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin-top: 15px;
-    width: 100%;
     padding: 10px;
     cursor: pointer;
+    margin-top: 5px; /* Adds space above the close icon */
   }
 
-  /* Add some padding so the close icon is not too close to the edge */
   .nav-links .close-icon img {
     cursor: pointer;
   }
