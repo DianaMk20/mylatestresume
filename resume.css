@@ -446,7 +446,6 @@ footer {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
     cursor: pointer;
     margin-top: 0px; /* Adds space above the close icon */
   }
