@@ -444,33 +444,6 @@ footer {
     right: 0; /* Bring the nav back into view */
   }
 
-  body {
-    position: relative; /* Ensure positioning is relative for the pseudo-element */
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(
-      213,
-      209,
-      218,
-      0.5
-    ); /* Optional background color with transparency */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Transition for smooth effect */
-    filter: blur(40px); /* Blur effect */
-  }
-
-  /* When nav is active, show the blur */
-  body.nav-active::before {
-    opacity: 1; /* Show the blur when nav is active */
-  }
-
   /* Style the close icon */
   .nav-links .close-icon {
     display: flex;
@@ -594,10 +567,6 @@ footer {
 
   .nav-links.active {
     right: 0; /* Reset right positioning */
-  }
-
-  body.nav-active::before {
-    opacity: 0; /* Disable blur effect for larger screens */
   }
 
   #main-header h1 {
