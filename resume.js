@@ -23,7 +23,7 @@ const toggleMenu = () => {
 
 // Function to open the resume PDF
 function openResume() {
-  window.open("resume.pdf", "_blank"); // Update the path to match your PDF file name
+  window.open("newresume.pdf", "_blank"); // Update the path to match your PDF file name
 }
 
 // Toggle the menu when the menu icon is clicked
