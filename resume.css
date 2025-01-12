@@ -378,11 +378,6 @@ footer {
   font-size: 1rem;
 }
 
-#ingoing {
-  color: brown;
-  font-style: italic;
-}
-
 /* Media Queries for Mobile Devices (max-width: 600px) */
 @media (max-width: 600px) {
   /* Display only the menu icon on mobile */
@@ -617,5 +612,10 @@ footer {
 
   .nav-links {
     gap: 30px; /* Add more space between links */
+  }
+
+  #ingoing {
+    color: brown;
+    font-style: italic;
   }
 }
