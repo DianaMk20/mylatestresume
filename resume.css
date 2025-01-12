@@ -255,6 +255,11 @@ h2 {
   margin-left: -5px;
 }
 
+.skill-item #ingoing {
+  font-style: italic;
+  color: red; /* Example: Change the text color to red */
+}
+
 /* Projects Section */
 #projects {
   scroll-margin-top: -30px;
@@ -612,10 +617,5 @@ footer {
 
   .nav-links {
     gap: 30px; /* Add more space between links */
-  }
-
-  #ingoing {
-    color: brown;
-    font-style: italic;
   }
 }
