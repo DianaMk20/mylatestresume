@@ -135,26 +135,6 @@ nav .nav-links li a:hover {
   align-items: center; /* Center vertically */
 }
 
-.resume-btn {
-  padding: 12px 30px; /* Button padding */
-  background-color: #1a73e8; /* Button color */
-  font-size: 1.2rem;
-  color: #ffffff; /* Text color */
-  text-decoration: none; /* Remove underline */
-  border: none; /* Remove any border */
-  border-radius: 50px; /* Rounded corners */
-  font-weight: bold; /* Bold text */
-  transition: background-color 0.3s ease; /* Smooth transition */
-  cursor: pointer;
-  margin-top: 20px; /* Add margin to separate from paragraph */
-}
-
-/* Hover effect */
-.resume-btn:hover {
-  background-color: #0d47a1; /* Darker shade on hover */
-  transform: scale(1.05); /* Slightly enlarge the button */
-}
-
 /* About Section */
 #about {
   text-align: left;
